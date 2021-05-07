@@ -34,9 +34,15 @@
 	# <HINT>
 
 	# What was the name of the function we have seen to check the length of a container?  Use your CLI to access the Python documentation and get help(len).
+    ## len() - give length of string array etc.. 
 
 def one(input1, input2):
-	return ""
+	if len(input1) > len(input2):
+		return input1
+	elif len(input1) < len(input2):
+		return input2
+	else:
+		return ""
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
 
@@ -60,8 +66,16 @@ def one(input1, input2):
 	# No hints for this question
 
 def two(arg1):
-	return "null"
+	if arg1 % 3 == 0:
+		return "fizz"
+	elif arg1 % 5 == 0:
+		return "buzz"
+	elif arg1 % 3 == 0 and agr1 % 5 == 0:
+		return "fizzbuzz"
+	else:
+		return "null"
 
+# used % == 0 as no remainder means the interger is divisible by arg1
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
 
 	# <QUESTION 3>
@@ -78,9 +92,24 @@ def two(arg1):
 
 	# How do we ignore case in a String? help(str) may offer some insight.
 
-def three(input):
-    return 0
+##vowels = 0
+#def three(input):
+#	for i in string
 
+
+def three(input): 
+    return input.lower() in [A, E, I, O, U]
+
+def vowels(str):
+	count = 0
+	for i in range(len(str)):
+		if three(str[i]):
+			count += 1
+		return count
+
+# created a list of vowels
+# set count to 0
+# used i as a variable and used range(len(str)) to allow i to iterate through the range 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
 
 	# <QUESTION 4>
@@ -102,7 +131,12 @@ def three(input):
 
 
 def four(input):
-    return False
+	input == range(a,z):
+	if input(bool("c")) not bool("ie"):
+    	return False
+	else:
+		return False
+
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
 
@@ -120,9 +154,21 @@ def four(input):
 	# <HINT>
 
 	# You may need to create a list of numbers from 0 to i, take a look at help(range).
+	
+	# need to use a factorial method, function factorial? 
 
 def five(input):
-	return 1
+	if int(input) == 1:
+		return input                        
+	elif n < 1:
+		return ""
+	else:
+		return input*five(input - 1)
+
+ # if ==1 then there is only 1 numeber a factorial, i am assuming this is my start point
+ # n < 1 gives a negative, factorial not possible
+ 
+
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
 
@@ -167,8 +213,15 @@ def six(string, int, char):
 	# Take a look at the documentation for Strings, List and range.
 
 def seven(inputString, char):
-	return -1
-
+	position1 = inputString.find(char)# using position to find char in the input string
+	if position1 == -1:
+		return -1
+	else:
+		return char.format(char, inputString, str(poision1 + 1))
+	
+	# using position to find char in the input string
+	# using str(postion1 + 1) to move through the string in an increment of 1
+ 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
 
 	# <QUESTION 8>

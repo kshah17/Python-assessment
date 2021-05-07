@@ -1,5 +1,5 @@
 import pytest
-from questions import python1
+import python1
 
 def test_one():
     assert python1.one("hi","hello") == "hello"
